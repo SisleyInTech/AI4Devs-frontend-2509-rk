@@ -5,7 +5,7 @@
 
 ---
 
-## Prompts Utilizados
+## Prompts
 
 ### Prompt 1: Análisis del Proyecto e Implementación Incremental
 
@@ -360,3 +360,15 @@ Recolecta todos mis prompts y colócalos en @prompts-sjm.md.
 ```
 
 ---
+---
+
+# Prompts de Apoyo - Versión 1
+
+## Herramienta Usada
+**ChatGPT**
+
+### Prompt 1:
+```
+Quiero que generes un diseño de interfaz con estilo similar a Figma para una pantalla que mostraré a continuación. 
+El objetivo es obtener una guía visual clara que pueda usarse como base para implementar la interfaz.
+```
