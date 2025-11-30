@@ -1,0 +1,194 @@
+/* Position.css - Estilos para la vista de Pipeline de Reclutamiento */
+
+/* 1. Layout General */
+.position-container {
+    background-color: #D3D3D8;
+    min-height: 100vh;
+    padding: 48px 40px;
+}
+
+/* 2. Encabezado */
+.position-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.position-back-arrow {
+    color: #333333;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.position-back-arrow:hover {
+    color: #000000;
+}
+
+.position-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+}
+
+/* 3. Pipeline Container */
+.pipeline-container {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+/* Scroll suave */
+.pipeline-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.pipeline-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.pipeline-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.pipeline-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Columnas de Fase */
+.pipeline-column {
+    background-color: #F0F0F3;
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 280px;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.pipeline-column-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.pipeline-column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 5. Tarjetas de Candidatos */
+.candidate-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+
+.candidate-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.candidate-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.candidate-rating {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.rating-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #26A828;
+}
+
+.rating-circle.empty {
+    background-color: #E0E0E0;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* 6. Responsividad */
+
+/* Tablet (≥768px y <1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .position-container {
+        padding: 40px 24px;
+    }
+    
+    .position-title {
+        font-size: 28px;
+    }
+    
+    .pipeline-column {
+        min-width: 220px;
+        width: 220px;
+    }
+    
+    .pipeline-container {
+        gap: 24px;
+    }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+    .position-container {
+        padding: 24px 16px;
+    }
+    
+    .position-header {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    
+    .position-title {
+        font-size: 24px;
+    }
+    
+    .pipeline-container {
+        gap: 16px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .pipeline-column {
+        min-width: 260px;
+        width: 260px;
+    }
+}
+
+/* Desktop grande (≥1440px) */
+@media (min-width: 1440px) {
+    .position-container {
+        padding: 48px 80px;
+    }
+    
+    .pipeline-column {
+        width: 300px;
+        min-width: 300px;
+    }
+}
+
